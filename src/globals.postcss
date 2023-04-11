@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply antialiased text-white;
+}
+
+.bubble {
+  @apply flex justify-center items-center relative;
+  @apply aspect-square my-4 mx-0 md:m-0 p-8 overflow-hidden;
+  @apply bg-bubble shadow-bubble rounded-full;
+}
+
+.shine {
+  @apply before:absolute before:left-[-200%] before:w-[200%] before:h-full;
+  @apply before:bg-shine hover:before:animate-shine;
+}

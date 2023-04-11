@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import Background from './BubbleBackground';
+import IconMenu from './icons/IconMenu';
 
 function Menu() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -27,7 +28,7 @@ function Menu() {
   return (
     <>
       <Button
-        variant={isMenuOpened ? 'selectedBubble' : 'bubble'}
+        variant={isMenuOpened ? 'secondary' : 'primary'}
         size="icon"
         className="flex md:hidden animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.5s] z-[300]"
         onClick={(e) => {
@@ -35,15 +36,11 @@ function Menu() {
           setIsMenuOpened(!isMenuOpened);
         }}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 12 24"
-          className={`p-1 w-9 h-9 stroke-white fill-white transition-transform origin-center ${
-            isMenuOpened ? 'rotate-90' : '-rotate-90'
+        <IconMenu
+          className={`p-0.5 w-9 h-9 transition-transform ${
+            isMenuOpened ? 'rotate-180' : 'rotate-0'
           }`}
-        >
-          <path d="M9.125 21.1L.7 12.7q-.15-.15-.213-.325T.425 12q0-.2.063-.375T.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z" />
-        </svg>
+        />
       </Button>
       <nav
         id="menu-wrapper"
@@ -59,7 +56,7 @@ function Menu() {
             <Link to="/about">
               <Button
                 variant={
-                  location.pathname === '/about' ? 'selectedBubble' : 'bubble'
+                  location.pathname === '/about' ? 'primary' : 'secondary'
                 }
                 size="medium"
               >
@@ -71,7 +68,7 @@ function Menu() {
             <Link to="/skills">
               <Button
                 variant={
-                  location.pathname === '/skills' ? 'selectedBubble' : 'bubble'
+                  location.pathname === '/skills' ? 'primary' : 'secondary'
                 }
                 size="medium"
               >
@@ -83,9 +80,7 @@ function Menu() {
             <Link to="/projects">
               <Button
                 variant={
-                  location.pathname === '/projects'
-                    ? 'selectedBubble'
-                    : 'bubble'
+                  location.pathname === '/projects' ? 'primary' : 'secondary'
                 }
                 size="medium"
               >
@@ -97,7 +92,7 @@ function Menu() {
             <Link to="/contact">
               <Button
                 variant={
-                  location.pathname === '/contact' ? 'selectedBubble' : 'bubble'
+                  location.pathname === '/contact' ? 'primary' : 'secondary'
                 }
                 size="medium"
               >

@@ -1,6 +1,8 @@
-function Avatar() {
+import '../globals.postcss';
+
+function Avatar(): JSX.Element {
   return (
-    <figure className="flex justify-center items-center min-w-[350px] max-w-[500px] min-h-[350px] max-h-[500px] aspect-square bg-bubble shadow-bubble rounded-full opacity-100 my-4 mx-0 md:m-0 p-8 relative animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.5s]">
+    <figure className="bubble md:min-w-[350px] md:min-h-[350px] max-w-[500px] max-h-[500px] animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.7s]">
       <img
         src="https://via.placeholder.com/500"
         alt="Avatar"

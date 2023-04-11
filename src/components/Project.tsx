@@ -35,12 +35,12 @@ function Project(props: React.HTMLAttributes<HTMLElement>) {
         </ul>
         <ul className="flex flex-wrap justify-center items-center gap-4">
           <li>
-            <Button href="#" size="small" variant="bubble">
+            <Button size="small" variant="secondary">
               {'<CODE>'}
             </Button>
           </li>
           <li>
-            <Button href="#" size="small" variant="selectedBubble">
+            <Button size="small" variant="primary">
               DEMO
             </Button>
           </li>

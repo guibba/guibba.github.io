@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-stretch bg-gradient-to-t from-[#02084a] to-[#03d0d0] overflow-hidden">
+      <main className="flex flex-col items-stretch bg-gradient-to-t from-indigo-950 to-cyan-400 overflow-hidden">
         <section className="relative">
           <BubbleBackground />
           <div className="flex flex-col justify-center items-stretch max-w-5xl py-5 px-0 m-auto min-h-screen relative z-50">

@@ -4,6 +4,12 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        primary: '#f87171ff',
+        secondary: '#ffffff66',
+        'primary-hl': '#fca5a5ff',
+        'secondary-hl': '#ffffff99',
+      },
       fontFamily: {
         sans: ['Poppins', 'Arial', 'sans-serif'],
         serif: ['Times New Roman', 'serif'],
@@ -61,6 +67,9 @@ export default {
           '0%': { transform: 'translateX(150px)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },
+      },
+      screens: {
+        hashover: { raw: '(hover: hover)' },
       },
     },
   },
