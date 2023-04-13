@@ -1,6 +1,4 @@
-import '../globals.postcss';
-
-interface Props extends React.HTMLAttributes<HTMLElement> {
+interface SkillProps extends React.HTMLAttributes<HTMLElement> {
   icon?: string;
   title?: string;
 }
@@ -10,10 +8,10 @@ function Skill({
   title = 'Placeholder',
   className = '',
   ...props
-}: Props) {
+}: SkillProps) {
   return (
-    <div className={`bubble w-36 h-36 p-4 shine ${className}`} {...props}>
-      <img className="max-w-[90px] opacity-80" src={icon} alt={title} />
+    <div className={`bubble p-5 w-[100px] shine ${className}`} {...props}>
+      <img className="opacity-80" src={icon} alt={title} />
     </div>
   );
 }

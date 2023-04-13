@@ -11,8 +11,8 @@ const sizes = {
 };
 
 const variants = {
-  primary: 'bg-primary hashover:hover:bg-primary-hl',
-  secondary: 'bg-secondary hashover:hover:bg-secondary-hl',
+  primary: 'bg-primary has-hover:hover:bg-primary-hl',
+  secondary: 'bg-secondary has-hover:hover:bg-secondary-hl',
 };
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

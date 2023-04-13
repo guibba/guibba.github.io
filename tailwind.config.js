@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#f87171ff',
+        primary: '#f87171',
         secondary: '#ffffff66',
-        'primary-hl': '#fca5a5ff',
-        'secondary-hl': '#ffffff99',
+        'primary-hl': '#ef4444',
+        'secondary-hl': '#dddddd66',
       },
       fontFamily: {
         sans: ['Poppins', 'Arial', 'sans-serif'],
@@ -24,13 +24,11 @@ export default {
         bubble:
           '0 10px 20px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.7)',
       },
-      gridTemplateColumns: {
-        fluid: 'repeat(auto-fit, minmax(150px, 1fr))',
-      },
       animation: {
         shine: 'shine 0.5s linear',
         float: 'float 2.5s infinite',
-        'slidein-top': 'slidetop 1.5s both',
+        'blur-in': 'blur-in 0.5s linear forwards 0.3s',
+        'swing-in': 'swing-in 0.5s ease-out forwards 0.5s',
         'slidein-bottom': 'slidebottom 1.5s both',
         'slidein-left': 'slideleft 1.5s both',
         'slidein-right': 'slideright 1.5s both',
@@ -51,9 +49,21 @@ export default {
           '66%': { transform: 'translate(-100px)' },
           '100%': { bottom: '100%', transform: 'translateX(100px)' },
         },
-        slidetop: {
-          '0%': { transform: 'translateY(-150px)', opacity: 0 },
-          '100%': { transform: 'translateY(0)', opacity: 1 },
+        'blur-in': {
+          '0%': { filter: 'blur(5px)', opacity: '0' },
+          '100%': { filter: 'blur(0)', opacity: '1' },
+        },
+        'swing-in': {
+          '0%': {
+            transform: 'rotateX(-70deg)',
+            'transform-origin': 'bottom',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'rotateX(0)',
+            'transform-origin': 'bottom',
+            opacity: '1',
+          },
         },
         slidebottom: {
           '0%': { transform: 'translateY(150px)', opacity: 0 },
@@ -69,7 +79,7 @@ export default {
         },
       },
       screens: {
-        hashover: { raw: '(hover: hover)' },
+        'has-hover': { raw: '(hover: hover)' },
       },
     },
   },

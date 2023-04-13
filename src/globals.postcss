@@ -4,12 +4,26 @@
 
 * {
   @apply antialiased text-white;
+  scrollbar-color: #ffffffaa transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  @apply md:w-[0.5rem];
+}
+
+::-webkit-scrollbar-track {
+  @apply md:w-[0.5rem] md:bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply md:bg-[#ffffffaa];
 }
 
 .bubble {
   @apply flex justify-center items-center relative;
-  @apply aspect-square my-4 mx-0 md:m-0 p-8 overflow-hidden;
-  @apply bg-bubble shadow-bubble rounded-full;
+  @apply aspect-square m-0 overflow-hidden;
+  @apply shadow-bubble rounded-full;
 }
 
 .shine {

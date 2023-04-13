@@ -1,32 +1,43 @@
+import { useContext } from 'react';
+import { DataContext } from '../data/DataContext';
+
 import Button from '../components/Button';
 
 function Contact() {
+  const data = useContext(DataContext);
+
   return (
     <>
-      <h2 className="text-4xl font-bold text-center animate-slidein-top">
-        CONTATO
+      <h2 className="text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
+        {data.contact.sectionName}
       </h2>
       <form
-        className="flex flex-col p-8 gap-6 m-6 bg-bubble shadow-bubble rounded-[3rem] relative blur-[0.5px] animate-[slidebottom_1.5s_both_0s,float_2.5s_infinite_1.8s]"
-        action=""
+        className="flex flex-col p-8 gap-6 bg-secondary rounded-lg relative animate-slidein-bottom mt-8"
+        action={data.contact.formAction}
+        method="POST"
       >
         <input
           type="text"
-          placeholder="Nome"
-          className="min-w-[3em] h-[30px] py-6 px-6 text-white bg-transparent shadow-bubble rounded-3xl placeholder:text-[#ffffff99] focus:outline-none focus:bg-[#ffffff33]"
+          name="name"
+          placeholder={data.contact.namePlaceholder}
+          maxLength={64}
+          className="w-full py-3 px-6 text-white bg-secondary placeholder:text-white focus:outline-none focus:bg-secondary-hl"
         />
         <input
           type="email"
-          placeholder="E-mail"
-          className="min-w-[3em] h-[30px] py-6 px-6 text-white bg-transparent shadow-bubble rounded-3xl placeholder:text-[#ffffff99] focus:outline-none focus:bg-[#ffffff33]"
+          name="email"
+          maxLength={64}
+          placeholder={data.contact.emailPlaceholder}
+          className="w-full py-3 px-6 text-white bg-secondary placeholder:text-white focus:outline-none focus:bg-[#ffffff44]"
         />
         <textarea
-          maxLength={280}
-          placeholder="Mensagem"
-          className="min-w-[3em] h-[250px] py-6 px-6 text-white bg-transparent shadow-bubble rounded-3xl resize-none placeholder:text-[#ffffff99] focus:outline-none focus:bg-[#ffffff33]"
+          name="message"
+          maxLength={1024}
+          placeholder={data.contact.messagePlaceholder}
+          className="w-full min-h-[250px] py-6 px-6 text-white bg-secondary resize-none placeholder:text-white focus:outline-none focus:bg-secondary-hl"
         />
-        <Button type="submit" variant="primary">
-          Enviar
+        <Button type="submit" variant="primary" value="send">
+          {data.contact.labelSendButton}
         </Button>
       </form>
     </>

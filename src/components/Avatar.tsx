@@ -1,15 +1,18 @@
-import '../globals.postcss';
+import { HTMLAttributes } from 'react';
 
-function Avatar(): JSX.Element {
+interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
+  imageSource: string;
+}
+
+function Avatar({ imageSource, className = '', ...props }: AvatarProps) {
   return (
-    <figure className="bubble md:min-w-[350px] md:min-h-[350px] max-w-[500px] max-h-[500px] animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.7s]">
+    <div className={`bubble ${className}`} {...props}>
       <img
-        src="https://via.placeholder.com/500"
+        src={imageSource}
         alt="Avatar"
-        className="rounded-full blur-[0.5px]"
+        className="rounded-full blur-sm hover:blur-0 p-8 opacity-30 hover:opacity-50 transition duration-1000"
       />
-      <figcaption className="hidden">Avatar</figcaption>
-    </figure>
+    </div>
   );
 }
 
