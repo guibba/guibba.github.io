@@ -8,7 +8,7 @@ function Skills() {
 
   return (
     <>
-      <h2 className="text-4xl font-bold text-center relative top-0 animate-blur-in opacity-0 mt-8 md:mt-0">
+      <h2 className="text-3xl md:text-4xl font-bold text-center relative top-0 animate-blur-in opacity-0 mt-8 md:mt-0">
         {data.skills.sectionName}
       </h2>
       <ul className="flex flex-row flex-wrap justify-center gap-x-9 gap-y-12 mt-8">

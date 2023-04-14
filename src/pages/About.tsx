@@ -6,7 +6,7 @@ function About() {
 
   return (
     <>
-      <h2 className="text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
+      <h2 className="text-3xl md:text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
         {data.about.sectionName}
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 text-xl font-light text-white">

@@ -10,7 +10,7 @@ function Projects() {
 
   return (
     <>
-      <h2 className="text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
+      <h2 className="text-3xl md:text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
         {data.projects.sectionName}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">

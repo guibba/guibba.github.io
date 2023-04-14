@@ -8,7 +8,7 @@ function Contact() {
 
   return (
     <>
-      <h2 className="text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
+      <h2 className="text-3xl md:text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
         {data.contact.sectionName}
       </h2>
       <form
