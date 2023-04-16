@@ -257,7 +257,7 @@ export const data: Data = {
   },
   contact: {
     sectionName: 'CONTATO',
-    formAction: 'https://formsubmit.co/guipbastos@gmail.com',
+    formAction: 'https://formsubmit.co/82a52d048c06dae5de1835491f98c2d9',
     namePlaceholder: 'Nome',
     emailPlaceholder: 'E-mail',
     messagePlaceholder: 'Mensagem',
