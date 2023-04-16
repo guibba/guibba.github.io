@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 * {
-  @apply antialiased text-white;
+  @apply text-default antialiased;
   scrollbar-color: #ffffffaa transparent;
   scrollbar-width: thin;
+}
+
+::selection {
+  @apply bg-primary-hl text-default;
 }
 
 ::-webkit-scrollbar {
@@ -21,12 +25,12 @@
 }
 
 .bubble {
-  @apply flex justify-center items-center relative;
-  @apply aspect-square m-0 overflow-hidden;
-  @apply shadow-bubble rounded-full;
+  @apply relative flex items-center justify-center;
+  @apply m-0 aspect-square overflow-hidden;
+  @apply rounded-full shadow-bubble;
 }
 
 .shine {
-  @apply before:absolute before:left-[-200%] before:w-[200%] before:h-full;
+  @apply before:absolute before:left-[-200%] before:h-full before:w-[200%];
   @apply before:bg-shine hover:before:animate-shine;
 }

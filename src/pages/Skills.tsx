@@ -8,18 +8,19 @@ function Skills() {
 
   return (
     <>
-      <h2 className="text-3xl md:text-4xl font-bold text-center relative top-0 animate-blur-in opacity-0 mt-8 md:mt-0">
+      <h2 className="relative top-0 mt-8 animate-blur-in text-center text-3xl font-bold opacity-0 md:mt-0 md:text-4xl">
         {data.skills.sectionName}
       </h2>
-      <ul className="flex flex-row flex-wrap justify-center gap-x-9 gap-y-12 mt-8">
+      <ul className="mt-8 flex flex-row flex-wrap justify-center gap-x-9 gap-y-12">
         {data.skills.list.map((s, i) => {
           return (
             <li
               key={i}
-              className="flex flex-col justify-center items-center gap-2 [&>p]:text-base [&>p]:font-normal [&>p]:text-center"
+              className="flex flex-col items-center justify-center gap-2 [&>p]:text-center [&>p]:text-base [&>p]:font-normal"
+              title={s.title}
             >
               <Skill icon={s.icon} title={s.title} className={s.animation} />
-              <p className="text-2xl font-normal text-center animate-slidein-bottom">
+              <p className="animate-slide-in-bottom text-center text-2xl font-normal">
                 {s.title}
               </p>
             </li>

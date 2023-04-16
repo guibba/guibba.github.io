@@ -5,6 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        default: '#ffffff',
+        'default-dark': '#000000',
         primary: '#f87171',
         secondary: '#ffffff66',
         'primary-hl': '#ef4444',
@@ -29,9 +31,9 @@ export default {
         float: 'float 2.5s infinite',
         'blur-in': 'blur-in 0.5s linear forwards 0.3s',
         'swing-in': 'swing-in 0.5s ease-out forwards 0.5s',
-        'slidein-bottom': 'slidebottom 1.5s both',
-        'slidein-left': 'slideleft 1.5s both',
-        'slidein-right': 'slideright 1.5s both',
+        'slide-in-bottom': 'slide-in-bottom 1.5s both',
+        'slide-in-left': 'slide-in-left 1.5s both',
+        'slide-in-right': 'slide-in-right 1.5s both',
       },
       keyframes: {
         shine: {
@@ -65,15 +67,15 @@ export default {
             opacity: '1',
           },
         },
-        slidebottom: {
+        'slide-in-bottom': {
           '0%': { transform: 'translateY(150px)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
         },
-        slideleft: {
+        'slide-in-left': {
           '0%': { transform: 'translateX(-150px)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },
-        slideright: {
+        'slide-in-right': {
           '0%': { transform: 'translateX(150px)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },

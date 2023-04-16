@@ -10,7 +10,7 @@ function Avatar({ imageSource, className = '', ...props }: AvatarProps) {
       <img
         src={imageSource}
         alt="Avatar"
-        className="rounded-full blur-sm hover:blur-0 p-8 opacity-30 hover:opacity-50 transition duration-1000"
+        className="rounded-full p-8 opacity-30 blur-sm transition duration-1000 hover:opacity-50 hover:blur-0"
       />
     </div>
   );

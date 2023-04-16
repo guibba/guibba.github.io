@@ -20,89 +20,132 @@ function Header({
   const data = useContext(DataContext);
   const location = useLocation();
 
+  const isMobile = window.innerWidth < 768;
+
   return (
     <header className={className} {...props}>
-      <Link to="/">
+      <Link to="/" tabIndex={-1}>
         <Button
-          className="md:cursor-pointer animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.5s] z-20"
+          className="z-20 animate-[slide-in-bottom_1.5s_both_1.2s,float_2.5s_infinite_2.7s] md:cursor-pointer"
           onClick={() => isMenuOpened && setIsMenuOpened(!isMenuOpened)}
           variant={location.pathname === '/' ? 'primary' : 'secondary'}
           size="icon"
+          tabIndex={location.pathname === '/' && !isMenuOpened ? -1 : 0}
+          title="Home"
         >
-          <IconWhale className="w-8 h-8" />
+          <IconWhale className="h-8 w-8" />
         </Button>
       </Link>
       <Button
         variant={isMenuOpened ? 'secondary' : 'primary'}
         size="icon"
-        className="flex md:hidden animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.5s] z-20"
+        className="z-20 flex animate-[slide-in-bottom_1.5s_both_1.2s,float_2.5s_infinite_2.7s] md:hidden"
         onClick={(e) => {
           e.stopPropagation();
           setIsMenuOpened(!isMenuOpened);
         }}
+        title="Menu"
       >
         <IconMenu
-          className={`p-1 w-8 h-8 transition-transform ${
+          className={`h-8 w-8 p-1 transition-transform ${
             isMenuOpened ? 'rotate-180' : 'rotate-0'
           }`}
         />
       </Button>
       <nav
         id="menu-wrapper"
-        className={`flex md:block flex-col justify-center md:justify-right items-start md:opacity-100 opacity-0 pointer-events-none md:pointer-events-auto fixed md:static inset-0 md:bg-transparent z-10 ${
+        className={`md:justify-right pointer-events-none fixed inset-0 z-10 flex flex-col items-start justify-center opacity-0 md:pointer-events-auto md:static md:block md:bg-transparent md:opacity-100 ${
           isMenuOpened
-            ? 'opacity-100 pointer-events-auto transition-opacity duration-300'
+            ? 'pointer-events-auto opacity-100 transition-opacity duration-300'
             : 'transition-opacity duration-300'
         }`}
       >
-        <ul className="flex flex-col md:flex-row items-center gap-8 md:gap-4 w-full">
-          <li className="animate-[slidebottom_1.5s_both_1s,float_2.5s_infinite_2.5s]">
-            <Link to="/about">
+        <ul className="flex w-full flex-col items-center gap-8 md:flex-row md:gap-4">
+          <li className="animate-[slide-in-bottom_1.5s_both_1s,float_2.5s_infinite_2.5s]">
+            <Link to="/about" tabIndex={-1}>
               <Button
                 onClick={() => isMenuOpened && setIsMenuOpened(!isMenuOpened)}
                 variant={
                   location.pathname === '/about' ? 'primary' : 'secondary'
                 }
                 size="medium"
+                tabIndex={
+                  location.pathname === '/about' || (!isMenuOpened && isMobile)
+                    ? -1
+                    : 0
+                }
+                title={
+                  data.about.sectionName.charAt(0) +
+                  data.about.sectionName.toLowerCase().slice(1)
+                }
               >
                 {data.about.sectionName}
               </Button>
             </Link>
           </li>
-          <li className="animate-[slidebottom_1.5s_both_0.8s,float_2.5s_infinite_2.7s]">
-            <Link to="/skills">
+          <li className="animate-[slide-in-bottom_1.5s_both_0.8s,float_2.5s_infinite_2.3s]">
+            <Link to="/skills" tabIndex={-1}>
               <Button
                 onClick={() => isMenuOpened && setIsMenuOpened(!isMenuOpened)}
                 variant={
                   location.pathname === '/skills' ? 'primary' : 'secondary'
                 }
                 size="medium"
+                tabIndex={
+                  location.pathname === '/skills' || (!isMenuOpened && isMobile)
+                    ? -1
+                    : 0
+                }
+                title={
+                  data.skills.sectionName.charAt(0) +
+                  data.skills.sectionName.toLowerCase().slice(1)
+                }
               >
                 {data.skills.sectionName}
               </Button>
             </Link>
           </li>
-          <li className="animate-[slidebottom_1.5s_both_0.6s,float_2.5s_infinite_2.9s]">
-            <Link to="/projects">
+          <li className="animate-[slide-in-bottom_1.5s_both_0.6s,float_2.5s_infinite_2.1s]">
+            <Link to="/projects" tabIndex={-1}>
               <Button
                 onClick={() => isMenuOpened && setIsMenuOpened(!isMenuOpened)}
                 variant={
                   location.pathname === '/projects' ? 'primary' : 'secondary'
                 }
                 size="medium"
+                tabIndex={
+                  location.pathname === '/projects' ||
+                  (!isMenuOpened && isMobile)
+                    ? -1
+                    : 0
+                }
+                title={
+                  data.projects.sectionName.charAt(0) +
+                  data.projects.sectionName.toLowerCase().slice(1)
+                }
               >
                 {data.projects.sectionName}
               </Button>
             </Link>
           </li>
-          <li className="animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_3.1s]">
-            <Link to="/contact">
+          <li className="animate-[slide-in-bottom_1.5s_both_0.4s,float_2.5s_infinite_1.9s]">
+            <Link to="/contact" tabIndex={-1}>
               <Button
                 onClick={() => isMenuOpened && setIsMenuOpened(!isMenuOpened)}
                 variant={
                   location.pathname === '/contact' ? 'primary' : 'secondary'
                 }
                 size="medium"
+                tabIndex={
+                  location.pathname === '/contact' ||
+                  (!isMenuOpened && isMobile)
+                    ? -1
+                    : 0
+                }
+                title={
+                  data.contact.sectionName.charAt(0) +
+                  data.contact.sectionName.toLowerCase().slice(1)
+                }
               >
                 {data.contact.sectionName}
               </Button>

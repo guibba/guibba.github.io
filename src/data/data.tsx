@@ -61,7 +61,7 @@ export type ContactProps = {
 
 export const data: Data = {
   home: {
-    avatar: '/assets/avatar.png' /*'https://via.placeholder.com/500',*/,
+    avatar: '/assets/avatar.png',
     greeting: 'OI! MEU NOME É',
     name: 'Guilherme Bastos',
     job: 'Desenvolvedor Front-End',
@@ -74,10 +74,10 @@ export const data: Data = {
       </>
     ),
     labelResume: 'Currículo',
-    linkResume: '#',
-    linkEmail: '#',
-    linkGitHub: '#',
-    linkLinkedIn: '#',
+    linkResume: '/cv.pdf',
+    linkEmail: 'mailto:guipbastos@gmail.com',
+    linkGitHub: 'https://github.com/guibba',
+    linkLinkedIn: 'https://www.linkedin.com/in/gpbastos/',
   },
   about: {
     sectionName: 'SOBRE',
@@ -127,85 +127,85 @@ export const data: Data = {
         icon: '/assets/html.svg',
         title: 'HTML',
         animation:
-          'animate-[slidebottom_1.5s_both_0.1s,float_2.5s_infinite_2.2s]',
+          'animate-[slide-in-bottom_1.5s_both_0.1s,float_2.5s_infinite_1.6s]',
       },
       {
         icon: '/assets/css.svg',
         title: 'CSS',
         animation:
-          'animate-[slidebottom_1.5s_both_0.2s,float_2.5s_infinite_2.3s]',
+          'animate-[slide-in-bottom_1.5s_both_0.2s,float_2.5s_infinite_1.7s]',
       },
       {
         icon: '/assets/javascript.svg',
         title: 'JavaScript',
         animation:
-          'animate-[slidebottom_1.5s_both_0.3s,float_2.5s_infinite_2.4s]',
+          'animate-[slide-in-bottom_1.5s_both_0.3s,float_2.5s_infinite_1.8s]',
       },
       {
         icon: '/assets/react.svg',
         title: 'React',
         animation:
-          'animate-[slidebottom_1.5s_both_0.4s,float_2.5s_infinite_2.5s]',
+          'animate-[slide-in-bottom_1.5s_both_0.4s,float_2.5s_infinite_1.9s]',
       },
       {
         icon: '/assets/typescript.svg',
         title: 'TypeScript',
         animation:
-          'animate-[slidebottom_1.5s_both_0.5s,float_2.5s_infinite_2.6s]',
+          'animate-[slide-in-bottom_1.5s_both_0.5s,float_2.5s_infinite_2.0s]',
       },
       {
         icon: '/assets/tailwind.svg',
         title: 'Tailwind CSS',
         animation:
-          'animate-[slidebottom_1.5s_both_0.6s,float_2.5s_infinite_2.7s]',
+          'animate-[slide-in-bottom_1.5s_both_0.6s,float_2.5s_infinite_2.1s]',
       },
       {
         icon: '/assets/reactrouter.svg',
         title: 'React Router',
         animation:
-          'animate-[slidebottom_1.5s_both_0.7s,float_2.5s_infinite_2.8s]',
+          'animate-[slide-in-bottom_1.5s_both_0.7s,float_2.5s_infinite_2.2s]',
       },
       {
         icon: '/assets/git.svg',
         title: 'Git',
         animation:
-          'animate-[slidebottom_1.5s_both_0.8s,float_2.5s_infinite_2.9s]',
+          'animate-[slide-in-bottom_1.5s_both_0.8s,float_2.5s_infinite_2.3s]',
       },
       {
         icon: '/assets/github.svg',
         title: 'GitHub',
         animation:
-          'animate-[slidebottom_1.5s_both_0.9s,float_2.5s_infinite_3.0s]',
+          'animate-[slide-in-bottom_1.5s_both_0.9s,float_2.5s_infinite_2.4s]',
       },
       {
         icon: '/assets/vite.svg',
         title: 'Vite',
         animation:
-          'animate-[slidebottom_1.5s_both_1.0s,float_2.5s_infinite_3.1s]',
+          'animate-[slide-in-bottom_1.5s_both_1.0s,float_2.5s_infinite_2.5s]',
       },
       {
         icon: '/assets/webpack.svg',
         title: 'Webpack',
         animation:
-          'animate-[slidebottom_1.5s_both_1.1s,float_2.5s_infinite_3.2s]',
+          'animate-[slide-in-bottom_1.5s_both_1.1s,float_2.5s_infinite_2.6s]',
       },
       {
         icon: '/assets/eslint.svg',
         title: 'ESLint',
         animation:
-          'animate-[slidebottom_1.5s_both_1.2s,float_2.5s_infinite_3.3s]',
+          'animate-[slide-in-bottom_1.5s_both_1.2s,float_2.5s_infinite_2.7s]',
       },
       {
         icon: '/assets/vscode.svg',
         title: 'VS Code',
         animation:
-          'animate-[slidebottom_1.5s_both_1.3s,float_2.5s_infinite_3.4s]',
+          'animate-[slide-in-bottom_1.5s_both_1.3s,float_2.5s_infinite_2.8s]',
       },
       {
         icon: '/assets/photoshop.svg',
         title: 'Photoshop',
         animation:
-          'animate-[slidebottom_1.5s_both_1.4s,float_2.5s_infinite_3.5s]',
+          'animate-[slide-in-bottom_1.5s_both_1.4s,float_2.5s_infinite_2.9s]',
       },
     ],
   },
@@ -220,7 +220,7 @@ export const data: Data = {
         languages: ['HTML', 'CSS', 'JavaScript'],
         linkCode: '#',
         linkDemo: '#',
-        animation: 'animate-[slideleft_1.5s_both_0.4s]',
+        animation: 'animate-[slide-in-left_1.5s_both_0.4s]',
       },
       {
         image: "bg-[url('/assets/project.png')]",
@@ -230,7 +230,7 @@ export const data: Data = {
         languages: ['HTML', 'CSS', 'JavaScript'],
         linkCode: '#',
         linkDemo: '#',
-        animation: 'animate-[slideleft_1.5s_both_0.2s]',
+        animation: 'animate-[slide-in-left_1.5s_both_0.2s]',
       },
       {
         image: "bg-[url('/assets/project.png')]",
@@ -240,7 +240,7 @@ export const data: Data = {
         languages: ['HTML', 'CSS', 'JavaScript'],
         linkCode: '#',
         linkDemo: '#',
-        animation: 'animate-[slidebottom_1.5s_both_0.2s]',
+        animation: 'animate-[slide-in-bottom_1.5s_both_0.2s]',
       },
       {
         image: "bg-[url('/assets/project.png')]",
@@ -250,7 +250,7 @@ export const data: Data = {
         languages: ['HTML', 'CSS', 'JavaScript'],
         linkCode: '#',
         linkDemo: '#',
-        animation: 'animate-[slidebottom_1.5s_both_0.4s]',
+        animation: 'animate-[slide-in-bottom_1.5s_both_0.4s]',
       },
     ],
     labelMoreButton: 'Ver mais',

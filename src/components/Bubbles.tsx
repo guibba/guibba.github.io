@@ -23,7 +23,7 @@ function Bubbles({
         return (
           <div
             key={i}
-            className={`absolute bottom-[-100px] bg-[#ffffff18] rounded-full ${b}`}
+            className={`absolute bottom-[-100px] rounded-full bg-secondary opacity-30 ${b}`}
           />
         );
       })}

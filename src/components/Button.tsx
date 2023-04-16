@@ -1,5 +1,4 @@
 import React from 'react';
-import cls from '../utils/cls';
 
 import '../globals.postcss';
 
@@ -24,22 +23,13 @@ function Button({
   type = 'button',
   size = 'medium',
   variant = 'primary',
-  className,
+  className = '',
   ...props
 }: ButtonProps) {
   return (
     <button
       type={type}
-      className={cls(
-        'flex justify-center items-center',
-        'relative overflow-hidden rounded-full',
-        'cursor-default md:cursor-pointer',
-        'text-white stroke-white fill-white',
-        'transition duration-200',
-        sizes[size],
-        variants[variant],
-        className
-      )}
+      className={`relative flex cursor-default items-center justify-center overflow-hidden rounded-full fill-default stroke-default text-default transition duration-200 focus:outline-default md:cursor-pointer ${sizes[size]} ${variants[variant]} ${className}`}
       {...props}
     >
       {props.children}

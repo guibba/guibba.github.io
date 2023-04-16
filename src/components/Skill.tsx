@@ -10,8 +10,8 @@ function Skill({
   ...props
 }: SkillProps) {
   return (
-    <div className={`bubble p-5 w-[100px] shine ${className}`} {...props}>
-      <img className="opacity-80" src={icon} alt={title} />
+    <div className={`bubble shine w-[100px] p-5 ${className}`} {...props}>
+      <img className="opacity-80" src={icon} alt={`${title} Logo.`} />
     </div>
   );
 }

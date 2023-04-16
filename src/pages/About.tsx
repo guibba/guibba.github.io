@@ -6,28 +6,28 @@ function About() {
 
   return (
     <>
-      <h2 className="text-3xl md:text-4xl font-bold text-center animate-blur-in opacity-0 mt-8 md:mt-0">
+      <h2 className="mt-8 animate-blur-in text-center text-3xl font-bold opacity-0 md:mt-0 md:text-4xl">
         {data.about.sectionName}
       </h2>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 text-xl font-light text-white">
-        <section className="flex flex-col justify-center items-center flex-1 gap-8 mb-0 md:mb-20 animate-slidein-left">
+      <div className="flex flex-col items-center justify-center gap-8 text-xl font-light md:flex-row md:gap-20">
+        <section className="animate-slide-in-left mb-0 flex flex-1 flex-col items-center justify-center gap-8 md:mb-20">
           {data.about.paragraphs.left.map((item, i) => {
             return (
               <p
                 key={i}
-                className="text-center sm:text-left [&>strong]:text-[#ea7070] [&>strong]:font-bold"
+                className="text-center sm:text-left [&>strong]:font-bold [&>strong]:text-[#ea7070]"
               >
                 {item}
               </p>
             );
           })}
         </section>
-        <section className="flex flex-col justify-center items-center flex-1 gap-8 mt-0 md:mt-20 animate-slidein-right">
+        <section className="animate-slide-in-right mt-0 flex flex-1 flex-col items-center justify-center gap-8 md:mt-20">
           {data.about.paragraphs.right.map((item, i) => {
             return (
               <p
                 key={i}
-                className="text-center sm:text-left [&>strong]:text-[#ea7070] [&>strong]:font-bold"
+                className="text-center sm:text-left [&>strong]:font-bold [&>strong]:text-[#ea7070]"
               >
                 {item}
               </p>
