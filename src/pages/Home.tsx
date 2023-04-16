@@ -29,7 +29,8 @@ function Home() {
           <li className="animate-slide-in-bottom">
             <a
               href={data.home.linkResume}
-              download="cv_guilherme_bastos"
+              target="_blank"
+              rel="noopener noreferrer"
               tabIndex={-1}
             >
               <Button

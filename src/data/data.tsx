@@ -74,7 +74,7 @@ export const data: Data = {
       </>
     ),
     labelResume: 'Currículo',
-    linkResume: '/cv.pdf',
+    linkResume: '/cv_guilherme_bastos.pdf',
     linkEmail: 'mailto:guipbastos@gmail.com',
     linkGitHub: 'https://github.com/guibba',
     linkLinkedIn: 'https://www.linkedin.com/in/gpbastos/',
@@ -257,7 +257,7 @@ export const data: Data = {
   },
   contact: {
     sectionName: 'CONTATO',
-    formAction: '',
+    formAction: 'https://formsubmit.co/guipbastos@gmail.com',
     namePlaceholder: 'Nome',
     emailPlaceholder: 'E-mail',
     messagePlaceholder: 'Mensagem',
