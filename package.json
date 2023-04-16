@@ -1,12 +1,9 @@
 {
-  "homepage": "https://guibba.github.io",
   "name": "guibba.github.io",
   "private": true,
   "version": "0.9.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "dev-network": "vite --host",
     "build": "tsc && vite build",
@@ -27,7 +24,6 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7",
