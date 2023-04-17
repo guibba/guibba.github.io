@@ -5,15 +5,21 @@ import { DataContext } from '../data/DataContext';
 import Button from '../components/Button';
 import IconWhale from '../components/icons/IconWhale';
 import IconMenu from '../components/icons/IconMenu';
+import IconBR from '../components/icons/IconBR';
+import IconUS from '../components/icons/IconUS';
 
 interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
   isMenuOpened: boolean;
   setIsMenuOpened: React.Dispatch<React.SetStateAction<boolean>>;
+  userLang: 'pt-BR' | 'en-US';
+  setUserLang: React.Dispatch<React.SetStateAction<'pt-BR' | 'en-US'>>;
 }
 
 function Header({
   isMenuOpened,
   setIsMenuOpened,
+  userLang,
+  setUserLang,
   className = '',
   ...props
 }: HeaderProps) {
@@ -61,6 +67,23 @@ function Header({
         }`}
       >
         <ul className="flex w-full flex-col items-center gap-8 md:flex-row md:gap-4">
+          <li className="animate-[slide-in-bottom_1.5s_both_1.2s,float_2.5s_infinite_2.7s]">
+            <Button
+              onClick={() =>
+                setUserLang(userLang === 'pt-BR' ? 'en-US' : 'pt-BR')
+              }
+              variant="secondary"
+              size="icon-flag"
+              tabIndex={!isMenuOpened && isMobile ? -1 : 0}
+              title={userLang === 'pt-BR' ? 'pt-BR' : 'en-US'}
+            >
+              {userLang === 'pt-BR' ? (
+                <IconBR className="h-8 w-8" />
+              ) : (
+                <IconUS className="h-8 w-8" />
+              )}
+            </Button>
+          </li>
           <li className="animate-[slide-in-bottom_1.5s_both_1s,float_2.5s_infinite_2.5s]">
             <Link to="/about" tabIndex={-1}>
               <Button
@@ -75,11 +98,11 @@ function Header({
                     : 0
                 }
                 title={
-                  data.about.sectionName.charAt(0) +
-                  data.about.sectionName.toLowerCase().slice(1)
+                  data[userLang].about.sectionName.charAt(0) +
+                  data[userLang].about.sectionName.toLowerCase().slice(1)
                 }
               >
-                {data.about.sectionName}
+                {data[userLang].about.sectionName}
               </Button>
             </Link>
           </li>
@@ -97,11 +120,11 @@ function Header({
                     : 0
                 }
                 title={
-                  data.skills.sectionName.charAt(0) +
-                  data.skills.sectionName.toLowerCase().slice(1)
+                  data[userLang].skills.sectionName.charAt(0) +
+                  data[userLang].skills.sectionName.toLowerCase().slice(1)
                 }
               >
-                {data.skills.sectionName}
+                {data[userLang].skills.sectionName}
               </Button>
             </Link>
           </li>
@@ -120,11 +143,11 @@ function Header({
                     : 0
                 }
                 title={
-                  data.projects.sectionName.charAt(0) +
-                  data.projects.sectionName.toLowerCase().slice(1)
+                  data[userLang].projects.sectionName.charAt(0) +
+                  data[userLang].projects.sectionName.toLowerCase().slice(1)
                 }
               >
-                {data.projects.sectionName}
+                {data[userLang].projects.sectionName}
               </Button>
             </Link>
           </li>
@@ -143,11 +166,11 @@ function Header({
                     : 0
                 }
                 title={
-                  data.contact.sectionName.charAt(0) +
-                  data.contact.sectionName.toLowerCase().slice(1)
+                  data[userLang].contact.sectionName.charAt(0) +
+                  data[userLang].contact.sectionName.toLowerCase().slice(1)
                 }
               >
-                {data.contact.sectionName}
+                {data[userLang].contact.sectionName}
               </Button>
             </Link>
           </li>

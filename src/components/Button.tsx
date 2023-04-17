@@ -7,6 +7,7 @@ const sizes = {
   medium: 'py-2.5 px-6',
   large: 'py-3.5 px-7',
   icon: 'p-2.5',
+  'icon-flag': 'p-1.5',
 };
 
 const variants = {

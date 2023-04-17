@@ -1,18 +1,21 @@
 import { useContext } from 'react';
 import { DataContext } from '../data/DataContext';
+import { useOutletContext } from 'react-router-dom';
+import { OutletProps } from '../App';
 
 import Skill from '../components/Skill';
 
 function Skills() {
   const data = useContext(DataContext);
+  const { userLang } = useOutletContext<OutletProps>();
 
   return (
     <>
       <h2 className="relative top-0 mt-8 animate-blur-in text-center text-3xl font-bold opacity-0 md:mt-0 md:text-4xl">
-        {data.skills.sectionName}
+        {data[userLang].skills.sectionName}
       </h2>
       <ul className="mt-8 flex flex-row flex-wrap justify-center gap-x-9 gap-y-12">
-        {data.skills.list.map((s, i) => {
+        {data[userLang].skills.list.map((s, i) => {
           return (
             <li
               key={i}
