@@ -67,23 +67,6 @@ function Header({
         }`}
       >
         <ul className="flex w-full flex-col items-center gap-8 md:flex-row md:gap-4">
-          <li className="animate-[slide-in-bottom_1.5s_both_1.2s,float_2.5s_infinite_2.7s]">
-            <Button
-              onClick={() =>
-                setUserLang(userLang === 'pt-BR' ? 'en-US' : 'pt-BR')
-              }
-              variant="secondary"
-              size="icon-flag"
-              tabIndex={!isMenuOpened && isMobile ? -1 : 0}
-              title={userLang === 'pt-BR' ? 'pt-BR' : 'en-US'}
-            >
-              {userLang === 'pt-BR' ? (
-                <IconBR className="h-8 w-8" />
-              ) : (
-                <IconUS className="h-8 w-8" />
-              )}
-            </Button>
-          </li>
           <li className="animate-[slide-in-bottom_1.5s_both_1s,float_2.5s_infinite_2.5s]">
             <Link to="/about" tabIndex={-1}>
               <Button
@@ -173,6 +156,23 @@ function Header({
                 {data[userLang].contact.sectionName}
               </Button>
             </Link>
+          </li>
+          <li className="animate-[slide-in-bottom_1.5s_both_0.2s,float_2.5s_infinite_1.7s]">
+            <Button
+              onClick={() =>
+                setUserLang(userLang === 'pt-BR' ? 'en-US' : 'pt-BR')
+              }
+              variant="secondary"
+              size="icon-flag"
+              tabIndex={!isMenuOpened && isMobile ? -1 : 0}
+              title={userLang === 'pt-BR' ? 'pt-BR' : 'en-US'}
+            >
+              {userLang === 'pt-BR' ? (
+                <IconBR className="h-8 w-8" />
+              ) : (
+                <IconUS className="h-8 w-8" />
+              )}
+            </Button>
           </li>
         </ul>
       </nav>
